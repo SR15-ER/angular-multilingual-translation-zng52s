@@ -1,0 +1,38 @@
+<mat-toolbar>
+  <span>Add Todo</span>
+  <span class="nav-spacer"></span>
+  <button mat-icon-button class="favorite-icon" aria-label="favorite todo list">
+    <mat-icon [matBadge]="todoService?.fav?.length"
+    [matBadgeColor]="todoService?.fav?.length ? 'warn' : ''"
+    [color]="todoService?.fav?.length ? 'warn' : ''"
+    >favorite</mat-icon>
+  </button>
+  <button mat-icon-button aria-label="Add Todo list">
+    <mat-icon routerLink='/list'>list</mat-icon>
+  </button>
+</mat-toolbar>
+<div class="card shadow text-center mb-5">
+  <div class="card-header bg-primary text-light">
+    <h4 i18n>ADD TODO</h4>
+  </div>
+
+  <div class="card-body">
+    <form #addTodo="ngForm" (submit)="onSubmit()">
+      <div class="form-group">
+        <input
+          type="text"
+          name="todo"
+          class="form-control"
+          placeholder="Add Todo . . ."
+          [(ngModel)]="todo"
+          required
+          i18n
+        />
+      </div>
+      <button class="btn btn-primary" [disabled]="addTodo.invalid">
+        ADD
+      </button>
+    </form>
+    <!-- {{todo}} -->
+  </div>
+</div>

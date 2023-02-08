@@ -1,0 +1,41 @@
+<mat-card >
+<mat-card-title>Signup</mat-card-title>
+<mat-card-content>
+    <div class="container">
+      <mat-form-field  class="width-50">
+        <mat-label>First Name</mat-label>
+        <input matInput>
+      </mat-form-field>
+  
+      <mat-form-field  class="width-50 ml-2">
+        <mat-label>Surname</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <br>
+      <mat-form-field  class="width-100">
+        <mat-label>Email address</mat-label>
+        <input matInput placeholder="Ex. pat@example.com">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+      <mat-label>Role</mat-label>
+      <mat-select>
+        <mat-option value="one">Admin</mat-option>
+        <mat-option value="two">User</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+      <mat-form-field  class="width-100">
+        <mat-label>Enter password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      <br>
+      <div class="button">
+      <button type="submit" color="primary" mat-raised-button (click)="onSubmit()">Signup</button>
+      </div>
+    </div>
+</mat-card-content>
+</mat-card>

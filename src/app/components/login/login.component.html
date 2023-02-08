@@ -1,0 +1,75 @@
+<!-- <header class="jumbotron" style="padding: 2%; border-radius: 0;">
+  <h2 class="text-center"> {{'login.title' | translate }} </h2>
+</header> -->
+
+<mat-card >
+<mat-card-title>Login</mat-card-title>
+<mat-card-content>
+<form [formGroup]="form" (ngSubmit)="submit()">
+<p>
+<mat-form-field>
+  <input type="text" matInput placeholder="{{ 'login.username.placeholder' | translate }}" formControlName="username">
+</mat-form-field>
+</p>
+
+<p>
+<mat-form-field>
+  <input type="password" matInput placeholder="{{ 'login.password.placeholder' | translate }}" formControlName="password">
+</mat-form-field>
+</p>
+
+<p *ngIf="error" class="error">
+{{ error }}
+</p>
+<div class="button">
+<button type="submit" color="primary" mat-raised-button (click)="onSubmit()">{{'login.button.name' | translate }}</button>
+</div>
+
+</form>
+
+</mat-card-content>
+<mat-card-actions>
+  <div class="button">
+ <a mat-button color="primary" routerLink="/signup"> {{'login.register.link' | translate}} </a>
+<br />
+<button  mat-button color="primary"> {{'login.forgotpassword.link' | translate}} </button> 
+  </div>
+<br />
+</mat-card-actions>
+</mat-card>
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-md-6"></div>
+    <div class="col-lg-4 col-md-6">
+ 
+      <form  (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label> {{ 'login.username.label' | translate }} </label>
+        <input type="text" name="userName" placeholder="{{ 'login.username.placeholder' | translate }}" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label> {{ 'login.password.label' | translate }} </label>
+        <input type="password" name="passWord" placeholder="{{ 'login.password.placeholder' | translate }}" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <button mat-raised-button> {{'login.button.name' | translate }} </button>
+    </div>
+      </form>
+      <div class="form-group">
+        <label> <a href="#" class="" style="float: left;"> {{'login.register.link' | translate}} </a> </label>
+        <br />
+        <label> <a href="#" class="" style="float: right;"> {{'login.forgotpassword.link' | translate}} </a> </label>
+        <br />
+        <div class="btn-group">
+          <button mat-raised-button  (click)="useLanguage('ta')">  {{'login.button.ta' | translate}}  </button>
+          <button mat-raised-button  (click)="useLanguage('fr')">  {{'login.button.fr' | translate}}  </button>
+          <button mat-raised-button  (click)="useLanguage('zh')">  {{'login.button.zh' | translate}}  </button>
+          <button mat-raised-button  (click)="useLanguage('en')"> {{'login.button.en' | translate}} </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6"></div>
+  </div>
+</div> -->

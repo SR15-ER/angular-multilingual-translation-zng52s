@@ -1,0 +1,40 @@
+{
+  "login": {
+    "title": "Login Form",
+    "username.label": "Username",
+    "username.placeholder": "Username Here",
+    "password.label": "Password",
+    "password.placeholder": "Enter Password",
+    "button.name": "Signin",
+    "forgotpassword.link": "Forgot Password ?",
+    "register.link": "Create New Account",
+    "button.en": "English",
+    "button.ta": "Tamil",
+    "button.fr": "French",
+    "button.zh": "Chinese"
+  },
+	"signup": {
+    "title": "Signup Form",
+    "username.placeholder": "Username",
+    "password.placeholder": "Password",
+		"email.palceholder":"Email address",
+		"role.placeholder":"Role",
+    "button.name": "Signup"
+  },
+  "todoPage": {
+    "title": "My Todo List",
+    "todoList": [
+      {
+        "title": "Todo One"
+      },
+      {
+        "title": "Todo Two"
+      },
+      {
+        "title": "Todo Three"
+      }
+    ],
+		"addTitle":"Add Todo",
+		"add":"Add"
+  }
+}

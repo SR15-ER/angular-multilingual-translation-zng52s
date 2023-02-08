@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title i18n>
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="complete"
+        (change)="onChange(todoInput)"
+      />{{ todoInput.title }}</mat-card-title
+    >
+    <mat-card-subtitle i18n
+      >Completed :{{ todoInput?.completed ? ' Yes' : ' No' }}</mat-card-subtitle
+    >
+  </mat-card-header>
+  <mat-card-actions align="end">
+    <div class="form-check d-inline">
+      <mat-icon
+        [color]="todoInput.isFavorite ? 'warn' : ''"
+        (click)="isFavorite()"
+        >favorite</mat-icon
+      >
+    </div>
+    <mat-icon (click)="deleteTodo(todoInput)">delete</mat-icon>
+  </mat-card-actions>
+</mat-card>
+<br />
